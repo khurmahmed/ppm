@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'light';
+    src: url('/global/css/alegreyasanslight.ttf');
+}
+@font-face {
+    font-family: 'medium';
+    src: url('/global/css/alegreyasansmedium.ttf');
+}
+@font-face {
+    font-family: 'regular';
+    src: url('/global/css/alegreyasansregular.ttf');
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+*{  
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    list-style:none;
+    color:#000;
+    font-size:16pt;
+    border: 0px solid;
+    font-family:'regular';
+    font-weight:normal;
+    line-height:100%;
+    letter-spacing:0px;
+    text-transform: uppercase;
+}
+html, body {
+    width:100%;
+    height:100%;
+    background-color:#5E5E5E;
+    min-width:1024px;
+    min-height:768px;
+    padding:50px;
+}
+h1, h2 {
+    font-size:30pt;
+    height:40px;
+    margin:30px 0px;
+    color:#FFF;
+    font-family:'light';
+}
+h2 {
+    position:absolute;
+    left:20px;
+    top:20px;
+    color:#000;
+    z-index:9999;
+    background-color:#FFF;
+    width:600px;
+}
+#container {
+    display: -webkit-flex;
+    display: flex;
+    min-height:600px;
+}
+input, label, li, a {
+    display:block;           
+}  
+/*NAV*/
+aside {
+    width:200px;
+    padding:15px;
+    background-color:#FFF;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    border: solid 5px #404040;
+    border-right:none;
+}
+nav {
+   position:fixed;
+   height:400px;
+}
+nav ul {
+    margin-top:30px;
+}
+nav ul li:first-child:hover {
+    background-color:#8abc01;
+}
+nav li {
+    height:30px;
+    border-radius:5px;
+    padding-top:5px;
+    text-align:center;
+}
+nav .add {
+    width:40px;
+    height:29px;
+    background:url(/global/img/buttons.jpg) 0 0;
+    margin:auto;
+}
+nav .navDel {
+    display:none;
+}
+nav #searchPop {
+    width:40px;
+    height:40px;
+    background:url(/global/img/search.png) 0 0;
+    margin:auto;
+    cursor:pointer;
+}
+/*Footer*/
+footer {
+    display: -webkit-flex;
+    display: flex;
+    margin-top:85px;
+    border-top: solid 2px #404040;
+    padding-top:20px;
+}
+footer ul {
+    -webkit-flex: 1;
+          flex: 1;
+}
+footer ul:first-child {
+    -webkit-flex: 2;
+          flex: 2;      
+}
+footer li {
+    text-align:center;
+}
+footer li:first-child {
+    font-family:'regular';
+}
+footer li:not(:first-child) {
+    font-size:12pt;
+    margin-top:5px;
+}
+/*Dim*/
+.dim {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#000;  
+    padding:100px;
+    padding-left:200px;
+    min-height:728px;
+    display:none;
+    z-index:9999
+} 
+.dim #postcode, .dim #search, .dim #client_search {
+    width:700px;
+    height:50px;
+    padding-left:10px;
+}
+.dim #submit {
+    display:none
+}
+.dim #distance, .dim #result {
+    margin:20px 0px;
+    width:200px;
+    height:25px;
+}
+.dim #result {
+    display:none
+}
+.dim .result {
+    cursor:pointer;
+}
+.dim li {
+    font-size:14pt;
+    color:#FFF;
+    height:30px;
+}
+.dim li:hover {
+    text-decoration:underline;
+}
+.close {
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:40px;
+    height:39px;                              
+    cursor:pointer;
+    z-index:999;
+}
+/*Full screen images*/
+#fullScreenImages {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#000;  
+    min-height:728px;
+    display:none;  
+}
+.arrow {
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:50%;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+}
+#left {
+    left:20px;
+}
+#right {
+    right:20px;
+}
+.arrow:hover {
+    opacity:0.5;
+}
+#fullScreenImages ul {
+    position:absolute;
+    width:30000px;
+}
+#fullScreenImages ul li {
+    display:inline;           
+}
+#fullScreenImages ul img {
+    width:100%;
+    height:100%;             
+}
+/*Main*/
+main {
+    -webkit-flex: 1;
+          flex: 1; 
+    background-color:#FFF; 
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border: solid 5px #404040;
+    padding:15px;
+}
+main * {
+    font-family:'light';
+}
+article {
+    display: -webkit-flex;
+    display: flex;    
+}
+section {     
+    -webkit-flex: 1;
+          flex: 1;          
+}
+section > li, section > a {
+    min-height:100px;
+    padding:15px;
+    border-radius:5px;
+}      
+section > a:hover {
+    background-color:#8abc01;
+}             
+section > li:first-child {      
+    font-family:'regular';  
+    font-size:18pt;              
+    background-color:#5a7f1a; 
+    border: solid 5px #404040;    
+    margin-bottom:20px;   
+}   
+section.updated_clients > li:first-child {
+    border-right:none;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;    
+}
+section.viewed_properties > li:first-child {     
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border-right: solid 5px #404040;   
+}
+section.viewed_properties_half > li:first-child {
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;   
+    border-left: 0px;  
+}
+section.viewed_properties > a li:not(:first-child) {
+    display:inline-block; 
+    padding:10px;
+}
+section.viewed_properties > a li:first-child {
+    text-decoration:underline;
+}
+section.viewed_properties img {
+    border-radius:5px;
+    width:100px;
+    height:60px;
+}             
+section.inputs input {
+    width:500px;
+    height:30px;
+    border:solid 2px #404040;
+    border-radius:5px;
+    margin:10px 0px;
+}
+section.inputs input[type="radio"], section.inputs input[type="range"], section.inputs input[type="file"] {
+    border:none;
+}
+.delete {
+    width:20px;
+    height:20px;
+    min-height:20px;
+    padding:0px;
+    background: url('/global/img/bin.png');
+    cursor:pointer;    
+}
+.link {
+    width:20px;
+    height:20px;
+    background: url('/global/img/link.png');
+    cursor:pointer;    
+}
+section > a > li:not(:first-child) {
+      margin-top:10px;
+}  
+#images li {
+    display:inline;
+}
+#error_message .result {
+    cursor:pointer;
+}
